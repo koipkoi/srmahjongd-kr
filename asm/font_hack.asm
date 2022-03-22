@@ -67,7 +67,7 @@ font_gfx_hack:
 ////////////////////////////////////////////////////////////
 org $082596f4
 default_font:
-    incbin gfx/default_font.bin
+    incbin gfx/default_font.1bpp
 
 
 ////////////////////////////////////////////////////////////
@@ -75,4 +75,4 @@ default_font:
 ////////////////////////////////////////////////////////////
 org $087b8800
 korean_font_gfx:
-    incbin gfx/korean_font.bin
+    incbin gfx/korean_font.1bpp
