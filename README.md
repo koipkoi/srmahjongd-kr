@@ -5,11 +5,13 @@
 ## 사용 도구
 
 - [xkas-plus](https://github.com/devinacker/xkas-plus) : asm 코드 입력 도구
+- [textproc](./tools/textproc) : 텍스트 전처리기
 
 ## 프로젝트 디렉터리 구조
 
 - asm : 기능 구현에 필요한 asm 파일들이 있습니다.
 - gfx : 그래픽과 관련된 파일들이 있습니다.
+- text : 텍스트와 관련된 파일들이 있습니다.
 - tools : 사용되는 도구가 있습니다.
 
 ## 빌드 방법
