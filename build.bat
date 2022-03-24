@@ -1,12 +1,14 @@
 @echo off
 
-@echo copy "baserom.gba" "srmahjongd-kr.gba"
-copy "baserom.gba" "srmahjongd-kr.gba" || (echo baserom.gba 파일이 없습니다. && goto :exit)
+if exist srmahjongd-kr.gba (
+    @echo del srmahjongd-kr.gba
+    @del srmahjongd-kr.gba
+)
 
-@echo del text.g.asm
-@del text.g.asm
+@echo copy "baserom.gba" "srmahjongd-kr.gba"
+copy "baserom.gba" "srmahjongd-kr.gba" || goto :exit
+
 @echo tools\textproc charmap.tbl text ko 087c6500 text.g.asm
-@del text.g.asm
 tools\textproc charmap.tbl text ko 087c6500 text.g.asm || goto :exit
 
 @echo tools\xkas -o "srmahjongd-kr.gba" main.asm
